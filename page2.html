@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Page 2</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #955;
+      padding: 10px 20px;
+      position: relative;
+    }
+
+    .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: flex;
+      gap: 15px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: underline;
+      padding: 10px;
+    }
+
+    .menu a:hover {
+      background-color: #555;
+      border-radius: 5px;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 34px;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: block;
+        flex-direction: column;
+        background-color: #787;
+        position: relative;
+        top: 15px;
+        left: 0;
+        width: 100%;
+      }
+
+      .menu.show {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="logo">✓in God we trust✓</span>
+    <span class="hamburger" onclick="toggleMenu()">☰</span>
+    <div class="menu" id="menu">
+      <a href="about.html">Home</a>
+      
+      <a href="contact.html">Contact</a>
+      <a href="home.html">Accueil</a>  
+        <a href="page.html">Page 1</a>
+        <a href="page2.html">Page 2</a>
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
+  </nav>
+ 
+    
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Page 1</title>
+</head>
+<body bgcolor="orange"></body>
+
+<html>
+<head>
+  <meta charset=UTF-8" />
+  <title>Page 2</title>
+</head>
+<body bgcolor="yellow">
+  <h1>
+    Page 2
+  </h1>
+  <p >Bravo,vous êtes arrivés sur la page 2</p>
+  <a href="home.html" accesskey="index.html">Go home</a>
+  
+  <table border="2" bgcolor="pink">
+    <tr bgcolor="orange">
+      <th colspan="1">Nom</th>
+      <th>prenom</th>
+      <th>âge</th>
+       <th colspan="2">Sexe</th>
+    </tr>
+    <tr bgcolor="white">
+      <td rowspan="1">CIZA</td>
+      <td rowspan="2">Patrick eddy</td>
+      <td>12</td>
+      <td>M</td>
+      <td>F</td>
+    </tr>
+    
+  </table>
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday">
+  <input type="submit" value="Submit">
+</form>
+
+<div align="center">
+<canvas id="myCanvas" width="300" height="300" style="border:1px solid #d3d3d3;">hello</canvas>
+</div>
+<marquee behavior="scroll" direction="left">
+Demo scrolling text... right to left!
+</marquee>
+
+
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
+
+<div align="center">
+  <div id="myChart" style="height: 100%; width: 100%;">
+  <div>
+</div>
+  
+<!DOCTYPE html>
+<html>
+<body>
+<div align="center">
+<canvas id="myCanvas" width="300" height="300" style="border:1px solid #d3d3d3;"></canvas>
+</div>  
+
+
+   
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<body>
+
+<h2>HTML table</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>App Name</th>
+    <th>Downloads</th>
+  </tr>
+  <tr>
+    <td>ToolKit</td>
+    <td>810000</td>
+  </tr>
+  <tr>
+    <td>HTML Creator</td>
+    <td>280000</td>
+  </tr>
+</table>
+  
+  
+  
+  <title>Créer un compte</title>
+  <style>
+    form {
+      width: 50%;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 1 4 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      height: 40px;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+  <form action="my site web.html" method="get">
+    <h2>Créer un compte</h2>
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required>
+
+    <label for="prenom">Prénom :</label>
+    <input type="text" id="prenom" name="prenom" required>
+
+    <label for="email">Adresse e-mail :</label>
+    <input type="email" id="email" name="email" required>
+
+    <input type="submit" value="Créer un compte">
+  </form>
+</body>
+</html>
+
+  
+  
+  
+    
+</body>
+</html>

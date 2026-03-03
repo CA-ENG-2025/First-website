@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>about bible.com
+  </title>
+  <style>
+    body {
+      background-image:('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+      background-size:cover;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size:30px;
+    }
+
+    nav {
+      background-color: #665;
+      padding: 10px 20px;
+      position: relative;
+     
+    }
+
+    .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: flex;
+      gap: 15px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: underline;
+      padding: 10px;
+    }
+
+    .menu a:hover {
+      background-color: #555;
+      border-radius: 5px;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 34px;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #865;
+        position: relative;
+        top: 50px;
+        left: 0;
+        width: 100%;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+      button{
+        font-size:20px;
+        font-weight:bold;
+        background-color:#900;
+        padding:10px 15px;
+        position:absolute;
+      }
+     
+    }
+  </style>
+</head>
+<body bgcolor="pink">
+
+  <nav>
+    <span class="logo">✓in God we trust✓</span>
+    <span class="hamburger" onclick="toggleMenu()">☰</span>
+    <div class="menu" id="menu">
+      <a href="about.html">Home</a>
+      
+      <a href="contact.html">Contact</a>
+      <a href="home.html">Accueil</a>  
+        <a href="page.html">Page 1</a>
+        <a href="page2.html">Page 2</a>
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
+  </nav></br></br></br>
+ 
+   
+
+<body class="pink"></body>
+
+<title>About page</title>
+  
+<body bgcolor="#48C9B0">
+
+<h1>Home page</h1>
+  <img alt="error" src="/storage/emulated/0/Pictures/facebook/FB_IMG_17457585350344955.jpg"></br></br>
+  <video width="200px"Controls autoplay muted loop="video">
+    <source src="/storage/emulated/0/DCIM/PHXBrowser/Status/6797040b64014bea892caade6bca8101.mp4" type="video/mp4"></video></br></br>
+  
+    <video width="400px"controls autoplay muted loop="video">
+      
+      <source src="/storage/emulated/0/Xender/video/Jesus is my forever more.mp4">
+  </video></br></br></br>
+  
+  
+  <!--Ajout d'un bouton pour revenir à la page précédente-->
+  <button onclick="window.history.back()" accesskey="home.html">Back</button>
+  
+  
+  
+  <title>Créer un compte</title>
+  <style>
+    form {
+      width: 50%;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      height: 40px;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+
+    .erreur {
+      color: red;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <form id="formulaire">
+    <h2>Créer un compte</h2>
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required>
+    <div class="erreur" id="erreurNom"></div>
+
+    <label for="prenom">Prénom :</label>
+    <input type="text" id="prenom" name="prenom" required>
+    <div class="erreur" id="erreurPrenom"></div>
+
+    <label for="email">Adresse e-mail :</label>
+    <input type="email" id="email" name="email" required>
+    <div class="erreur" id="erreurEmail"></div>
+
+    <label for="motDePasse">Mot de passe :</label>
+    <input type="password" id="motDePasse" name="motDePasse" required>
+    <div class="erreur" id="erreurMotDePasse"></div>
+
+    <label for="confirmerMotDePasse">Confirmer le mot de passe :</label>
+    <input type="password" id="confirmerMotDePasse" name="confirmerMotDePasse" required>
+    <div class="erreur" id="erreurConfirmerMotDePasse"></div>
+
+    <input type="submit" value="Créer un compte">
+  </form>
+
+  <script>
+    const formulaire = document.getElementById('formulaire');
+    const erreurNom = document.getElementById('erreurNom');
+    const erreurPrenom = document.getElementById('erreurPrenom');
+    const erreurEmail = document.getElementById('erreurEmail');
+    const erreurMotDePasse = document.getElementById('erreurMotDePasse');
+    const erreurConfirmerMotDePasse = document.getElementById('erreurConfirmerMotDePasse');
+
+    formulaire.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nom = document.getElementById('nom').value.trim();
+      const prenom = document.getElementById('prenom').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const motDePasse = document.getElementById('motDePasse').value;
+      const confirmerMotDePasse = document.getElementById('confirmerMotDePasse').value;
+
+      let valide = true;
+
+      if (nom.length < 2) {
+        erreurNom.innerText = 'Le nom doit comporter au moins 2 caractères';
+        valide = false;
+      } else {
+        erreurNom.innerText = '';
+      }
+
+      if (prenom.length < 2) {
+        erreurPrenom.innerText = 'Le prénom doit comporter au moins 2 caractères';
+        valide = false;
+      } else {
+        erreurPrenom.innerText = '';
+      }
+
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailRegex.test(email)) {
+        erreurEmail.innerText = 'Adresse e-mail invalide';
+        valide = false;
+      } else {
+        erreurEmail.innerText = '';
+      }
+
+      const motDePasseRegex = /^(?=.*[a-z
+
+  
+  
+  
+  
+  
+</body>
+
+</html>
+  
+  
+  
+  

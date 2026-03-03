@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Hamburger</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background:linear-gradient (to right #ff00ff, #ff5635, #00ff00);
+    }
+
+    nav {
+      background-color: #763;
+      padding: 10px 20px;
+      position: relative;
+    }
+
+    .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: flex;
+      gap: 15px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: underline;
+      padding: 10px;
+    }
+
+    .menu a:hover {
+      background-color: #555;
+      border-radius: 5px;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 34px;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #567;
+        position: relative;
+        top: 50px;
+        left: 0;
+        width: 100%;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+        
+      }
+      p{
+         margin-bottom:30px;
+          padding:20px;
+         border-radius:10px;
+        font-size:18px;
+      }
+      .skyblue{
+          background-color: #e0f7fa;
+           border:2px dotted #00acc1;
+      }
+      .pink{
+         background-color:#e8f5e9;
+         border:2px dashed #43a047;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="logo">✓in God we trust✓</span>
+    <span class="hamburger" onclick="toggleMenu()">☰</span>
+    <div class="menu" id="menu">
+      <a href="about.html">Home</a>
+     
+      <a href="contact.html">Contact</a>
+      <a href="home.html">Accueil</a>  
+        <a href="page.html">Page 1</a>
+        <a href="page2.html">Page 2</a>
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+  </script>
+  </nav>
+<style>
+
+
+ 
+</style>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Page 1</title>
+</head>
+<body class="z" bgcolor="orange">
+  <h1>
+    Page 1
+  </h1>
+  <p class="skyblue">Bienvenue sur ma page numero 1 !</br>
+    Souhaitez-vous aller sur la <a href="page2.html">page 2</a> 
+  </p>
+  <h2>Nos services</h2>
+  <h3>1° La sécurité</h3>
+  <p class="pink">Nous vous fournissons une sécurité suffisante pour que vous soyez en bon état</p>
+  <h3>3° La connection</h3>
+  <h2>Vos devoirs</h2>
+  <!--Ajout d'un bouton pour revenir à la page précédente-->
+  <button onclick="window.history.back()" accesskey="home.html">back</button>
+
+  
+  
+  
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #f2f2f2;
+      padding-top: 50px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .like-btn { background-color: #28a745; color: white; }
+    .dislike-btn { background-color: #dc3545; color: white; }
+    .like-btn:hover { background-color: #218838; }
+    .dislike-btn:hover { background-color: #c82333; }
+    textarea {
+      width: 80%;
+      height: 100px;
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    #comments {
+      margin-top: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    .comment {
+      background: #fff;
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 5px;
+      border-left: 4px solid #28a745;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>👍 J'aime: <span id="likeCount">0</span></h3>
+<h3>👎 Je n'aime pas: <span id="dislikeCount">0</span></h3>
+
+  <button class="like-btn" onclick="ajoutLike()">J'aime ❤️</button>
+  <button class="dislike-btn" onclick="ajoutDislike()">Je n'aime pas 💔</button>
+
+  <div>
+    <h3>💬 Tanga igitekerezo</h3>
+    <textarea id="commentInput" placeholder="Andika igitekerezo cawe..."></textarea><br>
+    <button onclick="ajoutComment()">Tanga</button>
+  </div>
+
+  <div id="comments"></div>
+
+  <script>
+    let likes = parseInt(localStorage.getItem("likes")) || 0;
+    let dislikes = parseInt(localStorage.getItem("dislikes")) || 0;
+    let savedComments = JSON.parse(localStorage.getItem("comments")) || [];
+
+    document.getElementById("likeCount").innerText = likes;
+    document.getElementById("dislikeCount").innerText = dislikes;
+
+    function ajoutLike() {
+      likes++;
+      localStorage.setItem("likes", likes);
+      document.getElementById("likeCount").innerText = likes;
+    }
+
+    function ajoutDislike() {
+      dislikes++;
+      localStorage.setItem("dislikes", dislikes);
+      document.getElementById("dislikeCount").innerText = dislikes;
+    }
+
+    function ajoutComment() {
+      let comment = document.getElementById("commentInput").value.trim();
+      if (comment !== "") {
+        savedComments.push(comment);
+[26/05 à 20:10] ChatGPT: localStorage.setItem("comments", JSON.stringify(savedComments));
+        afficherComments();
+        document.getElementById("commentInput").value = "";
+      }
+    }
+
+    function afficherComments() {
+      const commentsDiv = document.getElementById("comments");
+      commentsDiv.innerHTML = "";
+      savedComments.forEach(cmt => {
+        let div = document.createElement("div");
+        div.className = "comment";
+        div.textContent = cmt;
+        commentsDiv.appendChild(div);
+      });
+    }
+
+    afficherComments();
+  </script>
+  
+  
+  
+</body>
+</html>
